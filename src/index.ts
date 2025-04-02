@@ -5,7 +5,7 @@ import mizuRipple from './components/ripple.vue';
 
 const components = [
     mizuButton,
-    mizuRipple
+    mizuRipple,
 ];
 
 export function install(app: App) {
@@ -26,4 +26,5 @@ export {
     mizuDynamicColors,
     mizuBackgroundColors,
     mizuTextColors,
+
 };

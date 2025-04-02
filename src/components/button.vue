@@ -7,9 +7,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-export default defineComponent({
+export const mizuButton = defineComponent({
   name: 'mizuButton'
 })
+
+export default mizuButton
 </script>
 
 <style lang="stylus" scoped>
