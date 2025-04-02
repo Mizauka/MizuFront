@@ -1,7 +1,7 @@
 <template>
   <div>    
     <!-- 使用动态取色功能，使用v-bind保证响应性 -->
-    <div mizu-color-dynamic="blue,green,red,purple,orange">
+    <div mizu-color-dynamic="blue,red,green,yellow">
       <!-- 使用新的属性语法 -->
       <mizu-button mizu-ripple="a-900">按钮带彩色涟漪</mizu-button>
       <mizu-button mizu-ripple="a-50" filled>实心按钮带涟漪</mizu-button>
