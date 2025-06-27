@@ -88,21 +88,5 @@ export { createRippleEffect, mizuRipple };
 </script>
 
 <style lang="stylus">
-.mizu-ripple {
-    opacity 0.4
-    position absolute
-    border-radius 50%
-    background-color #000000 // 默认颜色，当没有指定mizu-ripple值时使用
-    filter blur(50px);
-    pointer-events: none
-    transform scale(0)
-    animation mizu-ripple-animation 0.6s linear
-}
-
-@keyframes mizu-ripple-animation {
-    to {
-        transform scale(4)
-        opacity 0
-    }
-}
+@import url('style/ripple.styl');
 </style>
