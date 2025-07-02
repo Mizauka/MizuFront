@@ -37,7 +37,7 @@
 /* 输入框 */
 .mizu-textfield-input {
     width: 100%;
-    transition: all 0.15s ease;
+    transition: all 0.15s ease, height 0s;
     display: block;
     box-sizing: border-box;
     margin: 0;
@@ -48,6 +48,7 @@
     border: 1.5px solid rgba(0, 0, 0, 0);
     outline: none;
     cursor: text;
+    resize: vertical;
 }
 
 input.mizu-textfield-input {
