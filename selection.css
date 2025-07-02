@@ -36,6 +36,11 @@
     background: rgba(0, 0, 0, 0.1);
 }
 
+.mizu-switch-icon:active{
+    background: rgba(0, 0, 0, 0.15);
+}
+
+
 .mizu-switch-icon::before {
     position: absolute;
     top: 3px;
@@ -64,6 +69,13 @@
 .mizu-switch input[type="checkbox"]:checked+.mizu-switch-icon {
     background: rgb(38, 108, 136);
     border: rgba(0, 0, 0, 0) solid 1.5px;
+}
+
+.mizu-switch input[type="checkbox"]:hover:checked+.mizu-switch-icon {
+    filter: brightness(1.1);
+}
+.mizu-switch input[type="checkbox"]:active:checked+.mizu-switch-icon {
+    filter: brightness(1.2);
 }
 
 .mizu-switch input[type="checkbox"]:checked+.mizu-switch-icon::before {
