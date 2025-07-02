@@ -6,4 +6,6 @@
 
 * {
     font-family: 'harmonyos sans sc';
+    -webkit-tap-highlight-color: transparent;
+
 }

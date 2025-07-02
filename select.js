@@ -172,3 +172,4 @@ document.addEventListener('DOMContentLoaded', function () {
     initMizuSelect();
 });
 
+export { initMizuSelect };
