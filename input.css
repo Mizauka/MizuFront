@@ -51,11 +51,11 @@
     cursor: text;
     resize: vertical;
     line-height: 26px;
+    min-width: 28px;
 }
 
 input.mizu-textfield-input {
     line-height: 0px;
-    min-height: 28px;
 }
 
 .mizu-textfield-input:focus {
