@@ -1,0 +1,59 @@
+/**
+ * =============================================================================
+ * ************   Button 按钮   ************
+ * =============================================================================
+ */
+.mizu-btn {
+    outline: none;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.15s ease;
+    border: solid 1.5px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    padding: 0 10px;
+    min-height: 30px;
+    min-width: 60px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 1px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.mizu-btn:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+
+.mizu-btn:active {
+    border-color: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.mizu-btn.mizu-btn-accent {
+    background: rgb(38, 108, 136);
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+
+.mizu-btn.mizu-btn-accent:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mizu-btn.mizu-btn-accent:active {
+    border-color: rgba(0, 0, 0, 0.2);
+    filter: brightness(1.2);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.mizu-btn.mizu-btn-icon {
+    padding: 0;
+}
+
