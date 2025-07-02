@@ -40,13 +40,13 @@
     border-bottom-color: rgba(0, 0, 0, 0.3);
 }
 
-.mizu-btn.mizu-btn-accent:hover {
+.mizu-btn.mizu-btn-accent:not(:disabled):hover {
     border-bottom-color: rgba(0, 0, 0, 0.4);
     filter: brightness(1.1);
     color: rgba(255, 255, 255, 0.8);
 }
 
-.mizu-btn.mizu-btn-accent:active {
+.mizu-btn.mizu-btn-accent:not(:disabled):active {
     border-color: rgba(0, 0, 0, 0.2);
     filter: brightness(1.2);
     color: rgba(255, 255, 255, 0.7);
@@ -57,3 +57,14 @@
     padding: 0;
 }
 
+.mizu-btn:disabled {
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.mizu-btn.mizu-btn-accent:disabled {
+    color: rgba(255, 255, 255, 0.5);
+
+}

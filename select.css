@@ -1,0 +1,186 @@
+/**
+ * =============================================================================
+ * ************   Select 选择控件   ************
+ * =============================================================================
+ */
+
+/* 隐藏原生select */
+.mizu-select {
+    display: none;
+}
+
+/* 自定义下拉容器 */
+.mizu-select-wrapper {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+}
+
+/* 显示选中项 */
+.mizu-select-display {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    outline: none;
+    display: inline-block;
+    transition: all 0.15s ease;
+    border: solid 1.5px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    padding: 0 10px;
+    height: 28px;
+    min-width: 100px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 1px;
+}
+
+.mizu-select-display:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+
+.mizu-select-wrapper.open .mizu-select-display {
+    border-color: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+/* 下拉箭头 */
+.mizu-select-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 16px;
+    color: #888;
+}
+
+/* 下拉选项列表 */
+.mizu-select-options {
+    transition: all 0.15s ease-in-out, opacity 0.05s ease, box-shadow 0.25s ease, top 0.05s ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #fff;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    box-shadow: none;
+    z-index: 0;
+    max-height: 35px;
+    overflow: hidden; /* 禁用原生滚动条 */
+    display: inline-block;
+    opacity: 0;
+    width: auto;
+}
+
+.mizu-select-options::-webkit-scrollbar {
+    display: none;
+}
+
+.mizu-select-wrapper.open .mizu-select-options {
+    top: -4px;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.25);
+    max-height: 300px;
+    opacity: 1;
+    z-index: 100000;
+}
+
+.mizu-select-option {
+    margin: 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 34px;
+    height: 34px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.mizu-select-option:hover:not(.disabled) {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.mizu-select-option.selected {
+    background: rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.mizu-select-option.selected::before {
+    position: absolute;
+    border-radius: 4px;
+    left: 0;
+    top: 9px;
+    width: 2.5px;
+    height: 16px;
+    background: rgb(38, 108, 136);
+    content: ' ';
+}
+
+.mizu-select-option.disabled {
+    color: #bbb;
+    cursor: not-allowed;
+    background: #fafafa;
+}
+
+/* 新增：自定义滚动条容器和条 */
+.mizu-scrollbar-track {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 2px;
+    bottom: 4px;
+    border-radius: 8px;
+    background: transparent;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.mizu-scrollbar-track:hover, .mizu-scrollbar-track:active {
+    background: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 4px;
+    bottom: 3px;
+}
+
+.mizu-select-wrapper.open .mizu-scrollbar-track {
+    opacity: 1;
+    pointer-events: auto;
+}
+.mizu-scrollbar-thumb {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.mizu-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.2);
+}
+.mizu-scrollbar-thumb:active {
+    background: rgba(0,0,0,0.3);
+}
+/* 内容区域用于滚动 */
+.mizu-select-options-inner {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 300px;
+    padding-right: 3px; /* 给自定义滚动条留空间 */
+    box-sizing: border-box;
+    border-radius: 8px;
+    scrollbar-width: none; /* Firefox隐藏 */
+}
+.mizu-select-options-inner::-webkit-scrollbar {
+    display: none !important;
+}
