@@ -50,12 +50,12 @@
     outline: none;
     cursor: text;
     resize: vertical;
-    min-height: 28px;
     line-height: 26px;
 }
 
 input.mizu-textfield-input {
     line-height: 0px;
+    min-height: 28px;
 }
 
 .mizu-textfield-input:focus {
