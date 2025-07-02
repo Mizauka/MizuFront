@@ -55,6 +55,7 @@
 
 .mizu-btn.mizu-btn-icon {
     padding: 0;
+    min-width: 0;
 }
 
 .mizu-btn:disabled {
@@ -66,5 +67,4 @@
 
 .mizu-btn.mizu-btn-accent:disabled {
     color: rgba(255, 255, 255, 0.5);
-
 }

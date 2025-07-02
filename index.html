@@ -15,71 +15,80 @@
 <body>
     <div class="mizu-container"
         style="background: rgba(0, 0, 0, 0.01); border: 1.5px solid rgba(0, 0, 0, 0.1); border-radius: 8px;">
+
+        <button class="mizu-btn mizu-btn-icon"><img src="favicon.png" width="60px" /></button>
+
+
         <h1>MizuFront Test</h1>
         <p>这是一个测试页面，使用了 MizuFront 框架。</p>
-        <button class="mizu-btn">Standard button</button>
-        <button class="mizu-btn mizu-btn-accent">Accent style button</button>
-        <button class="mizu-btn" disabled>Standard button</button>
-        <button class="mizu-btn mizu-btn-accent" disabled>Accent style button</button>
-        <br />
-        <button class="mizu-btn mizu-btn-icon"><img src="favicon.png" width="60px" /></button>
-        <br />
-        <div class="mizu-textfield">
+
+
+        <div class="mizu-textfield" style="height: 100px;">
             <input class="mizu-textfield-input" type="text" placeholder="User Name" />
         </div>
+
+        <div style="display: flex; justify-content: space-between;">
+            <!-- 新增：自定义下拉选择控件 -->
+            <select class="mizu-select" mizu-select>
+                <option value="1">State 1</option>
+                <option value="2">State 2</option>
+                <option value="3" disabled>State 3</option>
+                <option value="4">State 4</option>
+                <option value="5">State 5</option>
+                <option value="6">State 6</option>
+                <option value="7">State 7</option>
+                <option value="8">State 8</option>
+                <option value="9">State 9</option>
+                <option value="10">State 10</option>
+                <option value="11">State 11</option>
+                <option value="12">State 12</option>
+            </select>
+            <div class="mizu-textfield" style="flex-grow: 1;">
+                <input class="mizu-textfield-input" type="text" placeholder="User Name" />
+            </div>
+            <button class="mizu-btn">Standard button</button>
+        </div>
+
         <div class="mizu-textfield">
             <textarea class="mizu-textfield-input" placeholder="Description" style="height: 100px;"></textarea>
         </div>
+        <div style="display: flex; justify-content: right;">
+            <button class="mizu-btn" disabled>Standard button</button>
 
-        <!-- 新增：自定义下拉选择控件 -->
-        <select class="mizu-select" mizu-select>
-            <option value="1">State 1</option>
-            <option value="2">State 2</option>
-            <option value="3" disabled>State 3</option>
-            <option value="4">State 4</option>
-            <option value="5">State 5</option>
-            <option value="6">State 6</option>
-            <option value="7">State 7</option>
-            <option value="8">State 8</option>
-            <option value="9">State 9</option>
-            <option value="10">State 10</option>
-            <option value="11">State 11</option>
-            <option value="12">State 12</option>
-        </select>
+            <button class="mizu-btn mizu-btn-accent">Accent button</button>
 
-        <br />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
 
-        <label class="mizu-switch">
-            <input type="checkbox" />
-            <i class="mizu-switch-icon"></i>
-        </label>
+            <form>
+                <label class="mizu-switch">
+                    <input type="checkbox" />
+                    <i class="mizu-switch-icon"></i>
+                </label>
 
-        <label class="mizu-switch">
-            <input type="checkbox" checked disabled />
-            <i class="mizu-switch-icon"></i>
-        </label>
+                <label class="mizu-switch">
+                    <input type="checkbox" checked disabled />
+                    <i class="mizu-switch-icon"></i>
+                </label>
+            </form>
+            <form>
+                <label class="mizu-radio">
+                    <input type="radio" name="group1" />
+                    <i class="mizu-radio-icon"></i>
+                </label>
 
-        <br />
-        <form>
+                <label class="mizu-radio">
+                    <input type="radio" name="group1" disabled />
+                    <i class="mizu-radio-icon"></i>
+                </label>
 
-            <label class="mizu-radio">
-                <input type="radio" name="group1" />
-                <i class="mizu-radio-icon"></i>
-            </label>
+                <label class="mizu-radio">
+                    <input type="radio" name="group1" checked />
+                    <i class="mizu-radio-icon"></i>
+                </label>
+            </form>
 
-            <label class="mizu-radio">
-                <input type="radio" name="group1" disabled/>
-                <i class="mizu-radio-icon"></i>
-            </label>
-
-            <label class="mizu-radio">
-                <input type="radio" name="group1" checked />
-                <i class="mizu-radio-icon"></i>
-            </label>
-
-        </form>
-
-
+        </div>
 
     </div>
 </body>
