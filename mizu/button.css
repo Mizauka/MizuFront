@@ -59,6 +59,8 @@
 .mizu-btn.mizu-btn-icon {
     padding: 0;
     min-width: 0;
+    min-height: 0;
+    line-height: 0;
 }
 
 .mizu-btn:disabled {
