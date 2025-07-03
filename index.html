@@ -31,93 +31,76 @@
                 <option value="4">State 4</option>
                 <option value="5">State 5</option>
                 <option value="6">State 6</option>
-                <option value="7">State 7</option>
+                <option value="7" disabled>State 7</option>
                 <option value="8">State 8</option>
                 <option value="9">State 9</option>
-                <option value="10">State 10</option>
-                <option value="11">State 11</option>
-                <option value="12">State 12</option>
             </select>
             <div class="mizu-textfield" style="flex-grow: 1;">
                 <input class="mizu-textfield-input" type="text" placeholder="User Name" />
             </div>
         </div>
-
         <div class="mizu-textfield">
             <textarea class="mizu-textfield-input" placeholder="Description" style="height: 100px;"></textarea>
         </div>
         <div style="display: flex; justify-content: right;">
-            <button class="mizu-btn" disabled>Standard button</button>
-
-            <button class="mizu-btn mizu-btn-accent">Accent button</button>
-
+            <a class="mizu-btn" disabled>Standard button</a>
+            <a class="mizu-btn mizu-btn-accent">Accent button</a>
         </div>
-        <div style="display: flex; justify-content: left; gap: 15px;">
-
+        <div style="display: flex; justify-content: space-between; gap: 15px;">
+            <div style="display: flex; justify-content: space-between; gap: 15px;">
+                <form>
+                    <label class="mizu-radio">
+                        <input type="radio" name="group1" />
+                        <i class="mizu-radio-icon"></i>
+                        Radio 1
+                    </label><br>
+                    <label class="mizu-radio">
+                        <input type="radio" name="group1" disabled />
+                        <i class="mizu-radio-icon"></i>
+                        Radio 2
+                    </label><br>
+                    <label class="mizu-radio">
+                        <input type="radio" name="group1" checked />
+                        <i class="mizu-radio-icon"></i>
+                        Radio 3
+                    </label>
+                </form>
+                <form>
+                    <label class="mizu-checkbox">
+                        <input type="checkbox" />
+                        <i class="mizu-checkbox-icon"></i>
+                        Check 1
+                    </label><br>
+                    <label class="mizu-checkbox">
+                        <input type="checkbox" disabled checked />
+                        <i class="mizu-checkbox-icon"></i>
+                        Check 2
+                    </label><br>
+                    <label class="mizu-checkbox">
+                        <input type="checkbox" id="demo1" />
+                        <i class="mizu-checkbox-icon"></i>
+                        Check 3
+                    </label>
+                    <script>
+                        // indeterminate 属性只能通过 JavaScript 设置
+                        document.getElementById('demo1').indeterminate = true;
+                    </script>
+                </form>
+            </div>
             <form>
-                <label class="mizu-switch"> 
-                    <a class="mizu-btn mizu-btn-accent">Switch 1</a>
+                <label class="mizu-switch">
                     <input type="checkbox" />
                     <i class="mizu-switch-icon"></i>
                 </label><br>
-
                 <label class="mizu-switch">
-                    <a class="mizu-btn">Switch 2</a>
                     <input type="checkbox" checked disabled />
                     <i class="mizu-switch-icon"></i>
                 </label><br>
-
                 <label class="mizu-switch">
-                    <a class="mizu-btn">Switch 3</a>
                     <input type="checkbox" checked />
                     <i class="mizu-switch-icon"></i>
                 </label>
             </form>
-            <form>
-                <label class="mizu-radio">
-                    <input type="radio" name="group1" />
-                    <i class="mizu-radio-icon"></i>
-                    Radio 1
-                </label><br>
-
-                <label class="mizu-radio">
-                    <input type="radio" name="group1" disabled />
-                    <i class="mizu-radio-icon"></i>
-                    Radio 2
-                </label><br>
-
-                <label class="mizu-radio">
-                    <input type="radio" name="group1" checked />
-                    <i class="mizu-radio-icon"></i>
-                    Radio 3
-                </label>
-            </form>
-            <form>
-                <label class="mizu-checkbox">
-                    <input type="checkbox" />
-                    <i class="mizu-checkbox-icon"></i>
-                    Check 1
-                </label><br>
-
-                <label class="mizu-checkbox">
-                    <input type="checkbox" disabled checked />
-                    <i class="mizu-checkbox-icon"></i>
-                    Check 2
-                </label><br>
-
-                <label class="mizu-checkbox">
-                    <input type="checkbox" id="demo1" />
-                    <i class="mizu-checkbox-icon"></i>
-                    Check 3
-                </label>
-
-                <script>
-                    // indeterminate 属性只能通过 JavaScript 设置
-                    document.getElementById('demo1').indeterminate = true;
-                </script>
-
-            </form>
-
         </div>
 
     </div>

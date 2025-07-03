@@ -63,13 +63,13 @@
     line-height: 0;
 }
 
-.mizu-btn:disabled {
+.mizu-btn[disabled] {
     pointer-events: none;
     color: rgba(0, 0, 0, 0.5);
     opacity: 0.5;
     cursor: not-allowed;
 }
 
-.mizu-btn.mizu-btn-accent:disabled {
+.mizu-btn.mizu-btn-accent[disabled] {
     color: rgba(255, 255, 255, 0.5);
 }
