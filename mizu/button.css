@@ -4,6 +4,9 @@
  * =============================================================================
  */
 .mizu-btn {
+    text-decoration: none;
+    vertical-align: middle;
+    box-sizing: border-box;
     outline: none;
     text-align: center;
     display: inline-block;
@@ -17,7 +20,7 @@
     min-width: 60px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 0;
+    line-height: 28px;
     color: rgba(0, 0, 0, 0.8);
     margin: 1px;
     user-select: none;

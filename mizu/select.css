@@ -72,7 +72,7 @@
     border-radius: 8px;
     box-shadow: none;
     z-index: 0;
-    max-height: 0px;
+    max-height: 30px;
     overflow: hidden; /* 禁用原生滚动条 */
     display: inline-block;
     opacity: 0;

@@ -1,0 +1,294 @@
+/**
+ * =============================================================================
+ * ************   Switch 单选框   ************
+ * =============================================================================
+ */
+.mizu-switch {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.mizu-switch input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* 图标轨道 */
+.mizu-switch-icon {
+    top:7px;
+    box-shadow: inset 0 0 0 1.25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+    transition: all 0.15s ease, box-shadow 0.1s ease;
+}
+
+.mizu-switch:hover input[type="checkbox"]:not(:disabled)+.mizu-switch-icon {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.mizu-switch:active input[type="checkbox"]:not(:disabled)+.mizu-switch-icon{
+    background: rgba(0, 0, 0, 0.15);
+}
+
+
+.mizu-switch-icon::before {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 20px;
+    transition: all 0.15s ease, left 0.15s ease-in-out, transform 0.1s ease, width 0.15s ease-in-out;
+    content: ' ';
+}
+
+.mizu-switch:hover input[type="checkbox"]:not(:disabled)+.mizu-switch-icon::before {
+    transform: scale(1.1);
+}
+
+.mizu-switch:active input[type="checkbox"]:not(:disabled)+.mizu-switch-icon::before {
+    width: 20px;
+}
+
+/* 选中状态的图标 */
+.mizu-switch input[type="checkbox"]:checked+.mizu-switch-icon {
+    box-shadow: inset 0 0 0 15px rgb(38, 108, 136);
+}
+
+.mizu-switch:hover input[type="checkbox"]:not(:disabled):checked+.mizu-switch-icon {
+    filter: brightness(1.15);
+}
+
+.mizu-switch:active input[type="checkbox"]:not(:disabled):checked+.mizu-switch-icon {
+    filter: brightness(1.25);
+}
+
+.mizu-switch input[type="checkbox"]:checked+.mizu-switch-icon::before {
+    left: 24px;
+    background: #fff;
+}
+
+
+.mizu-switch:active input[type="checkbox"]:not(:disabled):checked+.mizu-switch-icon::before {
+    left: 18px;
+}
+
+.mizu-switch input[type="checkbox"]:disabled+.mizu-switch-icon {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/**
+ * =============================================================================
+ * ************   Radio 单选框   ************
+ * =============================================================================
+ */
+.mizu-radio {
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    padding-left: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.mizu-radio input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* 图标外圈 */
+.mizu-radio-icon {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    box-shadow: inset 0 0 0 1.5px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 18px;
+    transition: all 0.15s ease, box-shadow 0.1s ease;
+}
+
+.mizu-radio:hover input[type="radio"]:not(:disabled)+.mizu-radio-icon {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.mizu-radio:active input[type="radio"]:not(:disabled)+.mizu-radio-icon {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1.25px rgba(0, 0, 0, 0.2);
+}
+
+.mizu-radio input[type="radio"]:checked+.mizu-radio-icon {
+    box-shadow: inset 0 0 0 5px rgb(38, 108, 136);
+}
+
+.mizu-radio:hover input[type="radio"]:not(:disabled):checked+.mizu-radio-icon {
+    filter: brightness(1.15);
+    box-shadow: inset 0 0 0 5px rgb(38, 108, 136);
+}
+
+.mizu-radio:active input[type="radio"]:not(:disabled):checked+.mizu-radio-icon {
+    filter: brightness(1.25);
+    box-shadow: inset 0 0 0 5px rgb(38, 108, 136);
+}
+
+.mizu-radio-icon::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 14px;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.15s ease, transform 0.1s ease;
+    content: ' ';
+}
+
+.mizu-radio:active input[type="radio"]:not(:disabled)+.mizu-radio-icon::before {
+    transform: scale(0.3);
+    opacity: 1;
+}
+
+.mizu-radio input[type="radio"]:not(:disabled):checked+.mizu-radio-icon::before {
+    transform: scale(0.6);
+    opacity: 1;
+}
+
+.mizu-radio:hover input[type="radio"]:not(:disabled):checked+.mizu-radio-icon::before {
+    transform: scale(0.7);
+    opacity: 1;
+}
+
+.mizu-radio:active input[type="radio"]:not(:disabled):checked+.mizu-radio-icon::before {
+    transform: scale(0.6);
+    opacity: 1;
+}
+
+.mizu-radio input[type="radio"]:disabled+.mizu-radio-icon {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+
+/**
+ * =============================================================================
+ * ************   Checkbox 复选框   ************
+ * =============================================================================
+ */
+.mizu-checkbox {
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    padding-left: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.mizu-checkbox input[type="checkbox"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.mizu-checkbox-icon {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    display: inline-block;
+    z-index: 0;
+    width: 20px;
+    height: 20px;
+    box-shadow: inset 0 0 0 1.25px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    transition: all 0.15s ease, box-shadow 0.1s ease;
+}
+
+.mizu-checkbox:hover input[type="checkbox"]:not(:disabled)+.mizu-checkbox-icon {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.mizu-checkbox:active input[type="checkbox"]:not(:disabled)+.mizu-checkbox-icon {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1.25px rgba(0, 0, 0, 0.2);
+}
+
+.mizu-checkbox:hover input[type="checkbox"]:not(:disabled):checked+.mizu-checkbox-icon,
+.mizu-checkbox:hover input[type="checkbox"]:not(:disabled):indeterminate+.mizu-checkbox-icon {
+    filter: brightness(1.15);
+    box-shadow: inset 0 0 0 10px rgb(38, 108, 136);
+}
+
+.mizu-checkbox:active input[type="checkbox"]:not(:disabled):checked+.mizu-checkbox-icon,
+.mizu-checkbox:hover input[type="checkbox"]:not(:disabled):indeterminate+.mizu-checkbox-icon {
+    filter: brightness(1.25);
+    box-shadow: inset 0 0 0 10px rgb(38, 108, 136);
+}
+
+.mizu-checkbox-icon::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 0;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45" fill="none"><path id="1" d="M11 22L20.5 30.5L35 14" stroke="rgb(255,255,255)" stroke-width="4" /></svg>');
+    background-size: cover;
+    opacity: 0;
+    transition: all 0.15s ease , width 0.3s ease-in;
+    content: ' ';
+}
+
+/* 各种状态的图标 */
+.mizu-checkbox input[type="checkbox"]:checked+.mizu-checkbox-icon,
+.mizu-checkbox input[type="checkbox"]:indeterminate+.mizu-checkbox-icon {
+    box-shadow: inset 0 0 0 10px rgb(38, 108, 136);
+}
+
+.mizu-checkbox input[type="checkbox"]:checked+.mizu-checkbox-icon::before {
+    opacity: 1;
+    width: 20px;
+}
+
+.mizu-checkbox input[type="checkbox"]:indeterminate+.mizu-checkbox-icon::before {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45" fill="none"><path id="1" d="M0 0L26 0" stroke="rgb(255,255,255)" stroke-width="4" transform="matrix(1,0.000353668,-0.000353668,1,10,23)" /></svg>');
+    width: 20px;
+    opacity: 1;
+    transition: width 0s;
+}
+
+.mizu-checkbox input[type="checkbox"]:disabled+.mizu-checkbox-icon {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}

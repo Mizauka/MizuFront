@@ -6,9 +6,9 @@
     <meta name="description" content="description" />
     <meta charset="UTF-8" />
     <title>MizuFront Test</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./mizu/main.css" />
     <link rel="icon" href="favicon.png" />
-    <script src="main.js" type="module"></script>
+    <script src="./mizu/main.js" type="module"></script>
 
 </head>
 
@@ -52,19 +52,25 @@
             <button class="mizu-btn mizu-btn-accent">Accent button</button>
 
         </div>
-        <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; justify-content: left; gap: 15px;">
 
             <form>
-                <label class="mizu-switch">
+                <label class="mizu-switch"> 
+                    <a class="mizu-btn mizu-btn-accent">Switch 1</a>
                     <input type="checkbox" />
                     <i class="mizu-switch-icon"></i>
-                    Switch 1
                 </label><br>
 
                 <label class="mizu-switch">
+                    <a class="mizu-btn">Switch 2</a>
                     <input type="checkbox" checked disabled />
                     <i class="mizu-switch-icon"></i>
-                    Switch 2
+                </label><br>
+
+                <label class="mizu-switch">
+                    <a class="mizu-btn">Switch 3</a>
+                    <input type="checkbox" checked />
+                    <i class="mizu-switch-icon"></i>
                 </label>
             </form>
             <form>
@@ -85,6 +91,31 @@
                     <i class="mizu-radio-icon"></i>
                     Radio 3
                 </label>
+            </form>
+            <form>
+                <label class="mizu-checkbox">
+                    <input type="checkbox" />
+                    <i class="mizu-checkbox-icon"></i>
+                    Checkbox 1
+                </label><br>
+
+                <label class="mizu-checkbox">
+                    <input type="checkbox" disabled checked />
+                    <i class="mizu-checkbox-icon"></i>
+                    Checkbox 2
+                </label><br>
+
+                <label class="mizu-checkbox">
+                    <input type="checkbox" id="demo1" />
+                    <i class="mizu-checkbox-icon"></i>
+                    Checkbox 3
+                </label>
+
+                <script>
+                    // indeterminate 属性只能通过 JavaScript 设置
+                    document.getElementById('demo1').indeterminate = true;
+                </script>
+
             </form>
 
         </div>
