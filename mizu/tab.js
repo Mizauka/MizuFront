@@ -95,9 +95,11 @@ function initTabs() {
                     tab.classList.add('mizu-tab-active');
                     panels[i].classList.remove('mizu-panel-inactive');
                     panels[i].classList.add(enterClass);
+                    panelParent.classList.add('mizu-panel-animated'); // 添加动画类
                     animations++;
                     panels[i].addEventListener('animationend', function handler() {
                         panels[i].classList.remove(enterClass);
+                        panelParent.classList.remove('mizu-panel-animated');
                         panels[i].classList.add('mizu-panel-active');
                         panels[i].removeEventListener('animationend', handler);
                         finished++;

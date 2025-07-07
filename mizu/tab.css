@@ -170,11 +170,14 @@
     position: relative;
     display: block;
     width: 100%;
-    overflow-x: clip; /* 只裁剪横向动画溢出，不影响下拉菜单等 */
     transition: height 0.3s cubic-bezier(.4,0,.2,1); /* 平滑过渡高度变化 */
 }
 
 .mizu-panel-inactive {
     display: none;
     opacity: 0;
+}
+
+.mizu-panel-animated {
+    overflow: clip;
 }
