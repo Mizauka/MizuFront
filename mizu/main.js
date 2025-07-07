@@ -5,5 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 import {initMizuSelect} from './select.js';
+import {initTabs} from './tab.js';
 
 initMizuSelect();
+initTabs();

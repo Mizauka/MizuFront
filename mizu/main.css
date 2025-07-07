@@ -3,6 +3,7 @@
 @import url("input.css");
 @import url("selection.css");
 @import url("select.css");
+@import url("tab.css");
 
 * {
     font-family: 'harmonyos sans sc';

@@ -1,0 +1,180 @@
+/**
+ * =============================================================================
+ * ************   Tab   ************
+ * =============================================================================
+ */
+.mizu-tab {
+    position: relative;
+    display: flex;
+    min-height: 32px;
+    margin: 0 auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.mizu-tab a {
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 60px;
+    min-height: 32px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    flex: none;
+    padding: 12px 24px;
+    color: rgba(0, 0, 0, 0.9);
+    transition: all 0.15s ease;
+}
+
+
+.mizu-tab a[disabled] {
+    cursor: default;
+    opacity: 0.38;
+}
+
+.mizu-tab a::before {
+    position: absolute;
+    top: auto;
+    bottom: 5px;
+    left: auto;
+    right: auto;
+    width: 0;
+    height: 2.5px;
+    border-radius: 5px;
+    background-color: rgb(38, 108, 136);
+    transition: all 0.15s ease-in;
+    content: ' ';
+}
+
+.mizu-tab a.mizu-tab-active::before {
+    width: 20px;
+}
+
+.mizu-tab a:hover {
+    color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.025);
+}
+.mizu-tab a:active {
+    color: rgba(0, 0, 0, 0.25);
+}
+.mizu-panel-active {
+    opacity: 1;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* 向左进入动画 */
+.mizu-panel-enter-left {
+    animation: mizu-panel-enter-left-anim 0.3s both;
+}
+
+/* 向左退出动画 */
+.mizu-panel-exit-left {
+    animation: mizu-panel-exit-left-anim 0.3s both;
+}
+
+@keyframes mizu-panel-enter-left-anim {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes mizu-panel-exit-left-anim {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* 向右进入动画 */
+.mizu-panel-enter-right {
+    animation: mizu-panel-enter-right-anim 0.3s both;
+}
+
+/* 向右退出动画 */
+.mizu-panel-exit-right {
+    animation: mizu-panel-exit-right-anim 0.3s both;
+}
+
+@keyframes mizu-panel-enter-right-anim {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes mizu-panel-exit-right-anim {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.mizu-panel-enter-left,
+.mizu-panel-enter-right {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.mizu-panel-exit-left,
+.mizu-panel-exit-right {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.mizu-panel {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow-x: clip; /* 只裁剪横向动画溢出，不影响下拉菜单等 */
+    transition: height 0.3s cubic-bezier(.4,0,.2,1); /* 平滑过渡高度变化 */
+}
+
+.mizu-panel-inactive {
+    display: none;
+    opacity: 0;
+}
