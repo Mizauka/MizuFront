@@ -101,6 +101,7 @@ function initTabs() {
                         panels[i].classList.remove(enterClass);
                         panelParent.classList.remove('mizu-panel-animated');
                         panels[i].classList.add('mizu-panel-active');
+                        panels[i].classList.remove('mizu-panel-inactive');
                         panels[i].removeEventListener('animationend', handler);
                         finished++;
                         if (finished === animations) activateTab.animating = false;
