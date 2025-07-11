@@ -80,12 +80,12 @@
 
 /* 向左进入动画 */
 .mizu-panel-enter-left {
-    animation: mizu-panel-enter-left-anim 0.3s both;
+    animation: mizu-panel-enter-left-anim 0.3s both ease-in-out;
 }
 
 /* 向左退出动画 */
 .mizu-panel-exit-left {
-    animation: mizu-panel-exit-left-anim 0.3s both;
+    animation: mizu-panel-exit-left-anim 0.3s both ease-in-out;
 }
 
 @keyframes mizu-panel-enter-left-anim {
@@ -112,12 +112,12 @@
 
 /* 向右进入动画 */
 .mizu-panel-enter-right {
-    animation: mizu-panel-enter-right-anim 0.3s both;
+    animation: mizu-panel-enter-right-anim 0.3s both ease-in-out;
 }
 
 /* 向右退出动画 */
 .mizu-panel-exit-right {
-    animation: mizu-panel-exit-right-anim 0.3s both;
+    animation: mizu-panel-exit-right-anim 0.3s both ease-in-out;
 }
 
 @keyframes mizu-panel-enter-right-anim {
@@ -170,7 +170,7 @@
     position: relative;
     display: block;
     width: 100%;
-    transition: height 0.3s cubic-bezier(.4,0,.2,1); /* 平滑过渡高度变化 */
+    transition: height 0.3s ease-in-out; /* 平滑过渡高度变化 */
 }
 
 .mizu-panel-inactive {
